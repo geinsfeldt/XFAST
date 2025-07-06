@@ -1,6 +1,8 @@
 # XFAST: XDP Feature Adaptive Selection Tool
 
-**XDP-GA** is a research prototype that leverages **eBPF/XDP** (eXpress Data Path) for high-performance network data collection, combined with a **Genetic Algorithm (GA)** for intelligent **feature selection** directly at the kernel level. The system is designed for applications such as anomaly detection, traffic filtering, and adaptive monitoring in high-speed networks.
+**XFAST** is a research prototype that leverages **eBPF/XDP** (eXpress Data Path) for high-performance network data collection, combined with a **Genetic Algorithm (GA)** for intelligent **feature selection** directly at the kernel level. The system is designed for applications such as anomaly detection, traffic filtering, and adaptive monitoring in high-speed networks.
+
+The system uses the CIC-IDS-2017 dataset for evaluation.
 
 ## 📦 Project Structure
 
@@ -59,10 +61,10 @@
         sudo cat /sys/kernel/debug/tracing/trace_pipe
 
     Adapt dataset CIC-IDS-2017:
-        editcap -F libpcap -T ether -s 1514 ~/Downloads/Wednesday-workingHours.pcap ~/Downloads/Wednesday-workingHours-xdp.pcap
+        editcap -F libpcap -T ether -s 1514 ~/Wednesday-workingHours.pcap ~/Wednesday-workingHours-xdp.pcap
 
     Run tcpreplay:
-        sudo tcpreplay --intf1=test0 /home/gus/Downloads/Wednesday-workingHours-XDP.pcap
+        sudo tcpreplay --intf1=test0 ~/Wednesday-workingHours-XDP.pcap
 
 ### Requirements
 

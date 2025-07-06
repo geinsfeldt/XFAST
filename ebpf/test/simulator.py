@@ -7,7 +7,7 @@ from pathlib import Path
 # ---------- CONFIG ----------
 XDP_USER = "./xdp_user"
 XDP_ARGS   = ["test1"]
-PCAP = "/home/gus/Downloads/Wednesday-workingHours-xdp.pcap"
+PCAP = "~/Wednesday-workingHours-xdp.pcap"
 MAP_PIN = "/sys/fs/bpf/xdp_times_map"
 IFACE     = "test0"
 

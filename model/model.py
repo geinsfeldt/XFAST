@@ -18,7 +18,7 @@ FEATURES = [
 ]
 
 # Load the datasets
-for dirname, _, filenames in os.walk('/home/gus/Downloads/archive/'):
+for dirname, _, filenames in os.walk('~/archive/'):
     for filename in filenames:
         dfs.append(pd.read_csv(os.path.join(dirname, filename)))
 
@@ -81,7 +81,7 @@ y_eval  = y
 def save_thresholds(name, lows, highs):
     thr = pd.DataFrame({'feature':FEATURES,'lower':lows,'upper':highs})
     thr.to_csv(f"{name}_thresholds.csv", index=False)
-    print(f"\n📁 CSV salvo: {name}_thresholds.csv")
+    print(f"\n CSV salvo: {name}_thresholds.csv")
     print(thr.to_string(index=False))
 
 # -------------------------------------------------
